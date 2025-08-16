@@ -34,8 +34,6 @@ public class SelenideRepositorySearchTests {
         $("#wiki-tab").click();
         // проверяем наличие и открываем страницу Soft assertions
         $("#wiki-pages-box").$(withText("Show")).click();
-
-        //$("#wiki-pages-box").$("button").click();
         $("a[href$='SoftAssertions']").shouldBe(visible).click();
         // проверим что мы на нужной странице по заголовку
         $(".gh-header-title").shouldHave(text("SoftAssertions"));
